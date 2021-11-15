@@ -1,0 +1,32 @@
+body:before,
+body:after {
+  size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(231, 199, 158, 0.836);
+}
+
+.outer-container {
+  border: none;
+  height: 90vh;
+  width: 90vw;
+  bottom: 5vh;
+  top: 5vh;
+  left: 5vw;
+  right: 5vw;
+  position: fixed;
+  background-color: darkcyan;
+}
+
+.main-container {
+  border: none;
+  border-radius: 50%;
+  height: 50vh;
+  width: 50vw;
+  margin: 20vh auto;
+  position: relative;
+  background-color: burlywood;
+}
