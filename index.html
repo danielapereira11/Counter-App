@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3034dccdbc.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Counter App</title>
   </head>
   <body>
     <div class="outer-container">
-      <div class="main-container"></div>
+      <h1>Do you like this?</h1>
+      <div class="main-container">
+        <h2>I like this!</h2>
+        <div class="btns">
+          <button id="like-btn"><i class="fas fa-thumbs-up"></i></button>
+          <p id="count-el">0</p>
+          <button id="dislike-btn"><i class="fas fa-thumbs-down"></i></button>
+        </div>
+      </div>
+      <button id="save-btn">Save score</button>
     </div>
   </body>
   <script src="index.js"></script>
