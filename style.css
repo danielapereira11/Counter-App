@@ -11,13 +11,16 @@ body {
 .outer-container {
   border: none;
   max-height: 90vh;
+  min-height: 0;
   max-width: 90vw;
+  min-width: 0;
   bottom: 5vh;
   top: 5vh;
   left: 5vw;
   right: 5vw;
   position: fixed;
   background-color: darkcyan;
+  overflow: auto;
 }
 
 .main-container {
@@ -26,6 +29,7 @@ body {
   max-height: 50vh;
   max-width: 50vw;
   margin: 80px auto;
+  padding-bottom: 30px;
   position: relative;
   background-color: burlywood;
 }
@@ -49,26 +53,27 @@ h2 {
 
 .btns {
   display: flex;
-  margin: 3vh auto;
+  margin: 3vh auto 0;
+  padding-bottom: 0;
 }
 
 #like-btn,
 #dislike-btn {
   display: inline;
-  margin: 5vh auto;
-  padding-bottom: 5vh;
+  margin: 0 auto;
   text-align: center;
   background-color: transparent;
   border: none;
   max-width: 18vw;
   max-height: 18vh;
-}
-
-.fa-thumbs-up,
-.fa-thumbs-down {
   font-size: 75px;
   color: whitesmoke;
   text-align: center;
+}
+
+#like-btn:hover,
+#dislike-btn:hover {
+  color: darkcyan;
 }
 
 #count-el {
@@ -89,4 +94,14 @@ h2 {
   background-color: rgba(7, 112, 112, 0.733);
   border: 2px solid whitesmoke;
   box-shadow: 3px 3px 8px rgba(231, 199, 158, 0.836);
+}
+
+#save-btn:hover {
+  background-color: whitesmoke;
+  color: rgba(7, 112, 112, 0.733);
+  border: 2px solid rgba(7, 112, 112, 0.733);
+}
+
+button:hover {
+  cursor: pointer;
 }
