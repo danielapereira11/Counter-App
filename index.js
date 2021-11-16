@@ -2,6 +2,7 @@ const countEl = document.querySelector("#count-el");
 const addScoreBtn = document.querySelector("#like-btn");
 const minusScoreBtn = document.querySelector("#dislike-btn");
 const saveBtn = document.querySelector("#save-btn");
+const clearBtn = document.querySelector("#clear-btn");
 const opinionHeader = document.querySelector("#opinion-header");
 let count = 0;
 
@@ -21,12 +22,18 @@ function saveScore() {
   localStorage.setItem("Total likes", JSON.stringify(count));
 }
 
+function clearScore() {
+  count = 0;
+  countEl.innerHTML = " ";
+  opinionHeader.innerHTML = " ";
+}
+
 function consoleScore() {
   console.log(localStorage.getItem("Total likes"));
 }
 
 addScoreBtn.addEventListener("click", addScore);
 minusScoreBtn.addEventListener("click", removeScore);
-
 saveBtn.addEventListener("click", saveScore);
 saveBtn.addEventListener("dblclick", consoleScore);
+clearBtn.addEventListener("click", clearScore);
