@@ -15,3 +15,5 @@ function removeScore() {
 
 addScoreBtn.addEventListener("click", addScore);
 minusScoreBtn.addEventListener("click", removeScore);
+
+countEl.innerHTML = count;
