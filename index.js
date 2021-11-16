@@ -17,6 +17,16 @@ function removeScore() {
   countEl.innerHTML = count;
 }
 
+function saveScore() {
+  localStorage.setItem("Total likes", JSON.stringify(count));
+}
+
+function consoleScore() {
+  console.log(localStorage.getItem("Total likes"));
+}
+
 addScoreBtn.addEventListener("click", addScore);
 minusScoreBtn.addEventListener("click", removeScore);
 
+saveBtn.addEventListener("click", saveScore);
+saveBtn.addEventListener("dblclick", consoleScore);
