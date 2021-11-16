@@ -7,13 +7,16 @@ let count = 0;
 
 function addScore() {
   opinionHeader.innerHTML = "I like this!";
+  count += 1;
+  countEl.innerHTML = count;
 }
 
 function removeScore() {
   opinionHeader.innerHTML = "I don't like this!";
+  count -= 1;
+  countEl.innerHTML = count;
 }
 
 addScoreBtn.addEventListener("click", addScore);
 minusScoreBtn.addEventListener("click", removeScore);
 
-countEl.innerHTML = count;
