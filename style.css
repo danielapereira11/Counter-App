@@ -127,3 +127,15 @@ h2 {
 button:hover {
   cursor: pointer;
 }
+
+.pulse {
+  animation: pulse linear 1s 1;
+}
+
+@keyframes pulse {
+  50% {
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    min-width: 27px;
+  }
+}
