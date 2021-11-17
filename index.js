@@ -19,7 +19,7 @@ function removeScore() {
 }
 
 function saveScore() {
-  localStorage.setItem("Total likes", JSON.stringify(count));
+  localStorage.setItem("Count", JSON.stringify(count));
 }
 
 function clearScore() {
@@ -29,7 +29,7 @@ function clearScore() {
 }
 
 function consoleScore() {
-  console.log(localStorage.getItem("Total likes"));
+  console.log(localStorage.getItem("Count"));
 }
 
 addScoreBtn.addEventListener("click", addScore);
