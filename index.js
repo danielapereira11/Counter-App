@@ -10,12 +10,25 @@ let count = 0;
 let negCountVal = 0;
 let posCountVal = 0;
 
+function pulsePosCountEl() {
+  posCountEl.classList.remove("pulse");
+  void posCountEl.offsetWidth;
+  posCountEl.classList.add("pulse");
+}
+
+function pulseNegCountEl() {
+  negCountEl.classList.remove("pulse");
+  void negCountEl.offsetWidth;
+  negCountEl.classList.add("pulse");
+}
+
 function addScore() {
   opinionHeader.innerHTML = "I like this!";
   count += 1;
   countEl.innerHTML = count;
   posCountVal += 1;
   posCountEl.innerHTML = posCountVal;
+  pulsePosCountEl();
 }
 
 function removeScore() {
@@ -24,6 +37,7 @@ function removeScore() {
   countEl.innerHTML = count;
   negCountVal += 1;
   negCountEl.innerHTML = negCountVal;
+  pulseNegCountEl();
 }
 
 function saveScore() {
@@ -45,5 +59,3 @@ minusScoreBtn.addEventListener("click", removeScore);
 saveBtn.addEventListener("click", saveScore);
 saveBtn.addEventListener("dblclick", consoleScore);
 clearBtn.addEventListener("click", clearScore);
-
-// add a function, that says that when we click on the button for like or dislike, the round number at the bottom flashes once for each click
